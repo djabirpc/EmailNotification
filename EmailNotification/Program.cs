@@ -46,7 +46,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-RecurringJob.AddOrUpdate<IContractService>("DailyTasl", x => x.CheckAndSendContractNotifications(), Cron.Minutely());
+RecurringJob.AddOrUpdate<IContractService>("DailyTasl", x => x.CheckAndSendContractNotifications(), Cron.Daily());
 
 app.UseAuthorization();
 
